@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live People Counter</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #1c1e21;
+        }
+
+        h1 {
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 90%;
+        }
+
+        .video-box {
+            border: 5px solid #007bff;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 20px;
+            background-color: #000;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: 1280px;
+        }
+
+        .info-text {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #dc3545;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Live People Counter</h1>
+        <p>Aplikasi deteksi orang real-time menggunakan YOLOv8n</p>
+
+        <div class="video-box">
+            <img src="{{ url_for('video_feed') }}" alt="Kamera tidak tersedia">
+        </div>
+
+        <p style="margin-top: 20px; color: #666; font-size: 14px;">
+            Menjalankan inferensi pada imgsz: 1280
+        </p>
+    </div>
+</body>
+
+</html>
