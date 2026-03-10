@@ -26,7 +26,7 @@ def generate_frames():
             results = model.predict(
                 source=frame,
                 imgsz=1280,
-                conf=0.25,
+                conf=0.5,
                 iou=0.5,
                 classes=[0],
                 verbose=False
